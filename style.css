@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Hubballi&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Amatic SC", cursive;
+
+  color: white;
+}
+body {
+  background: black;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  font-size: 35px;
+  align-items: center;
+  margin: 15px 20px;
+}
+.nav button {
+  padding: 15px;
+  font-size: 35px;
+}
+h1 {
+  text-align: center;
+  font-size: 50px;
+}
+.box-holder {
+  margin: 0 auto;
+  font-size: 30px;
+  color: white;
+}
+.box-holder span {
+  background: white;
+  position: relative;
+  width: 100%;
+  top: -85px;
+  padding: 0px 100%;
+  z-index: -1;
+}
+.box-holder .box {
+  width: 10%;
+  text-align: center;
+  margin: 0 auto;
+  background: blue;
+  margin-top: 85px;
+  padding: 40px 10px;
+  font-size: 50px;
+  color: black;
+  background: white;
+}
+.main {
+  display: flex;
+  justify-content: space-between;
+  font-size: 50px;
+  align-items: center;
+  margin: 0 20%;
+}
+.main .inputs button {
+  font-size: 45px;
+  margin-top: 50px;
+  padding: 10px;
+}
+.main .inputs {
+  display: flex;
+  flex-direction: column;
+}
+.main .inputs input {
+  background: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  color: black;
+  border: 3px solid white;
+  font-size: 30px;
+}
+.main .inputs input :focus,
+:hover {
+  outline: none;
+}
+.main .inputs button:hover,
+.nav button:hover {
+  background: white;
+  color: black;
+  cursor: pointer;
+}
+button {
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 2px;
+}
+.win-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 60px;
+  background: green;
+  display: none;
+}
+.win-btn.active,
+.lost-btn.active {
+  display: block;
+}
+.lost-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 60px;
+  background: red;
+  display: none;
+}
+@media (max-width: 1000px) {
+  .main {
+    flex-direction: column;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+  }
+  .win-btn,
+  .lost-btn {
+    font-size: 30px;
+  }
+}
